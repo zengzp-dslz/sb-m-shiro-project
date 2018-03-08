@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>.%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n
+            </Pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <!--<logger name="com.example.main" additivity="true">-->
+        <!--<level value="DEBUG" />-->
+        <!--<appender-ref ref="consoleAppender" />-->
+    <!--</logger>-->
+
+    <logger name="com.ibatis" level="DEBUG" />
+    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG" />
+    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />
+    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG" />
+    <!--<logger name="java.sql.Connection" level="DEBUG" />-->
+    <!--<logger name="java.sql.Statement" level="DEBUG" />-->
+    <!--<logger name="java.sql.PreparedStatement" level="DEBUG" />-->
+
+    <root>
+        <level value="DEBUG" />
+        <appender-ref ref="consoleAppender" />
+    </root>
+</configuration>
